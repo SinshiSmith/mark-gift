@@ -19,4 +19,7 @@ $(window).scroll(function() {
   else {
     $("#w4").css({"opacity" : "0"});
   }
+  if (x  > (z* 3.8) ) {
+    $("#massage").animate({opacity : 1}, 1000);
+  }
 });
