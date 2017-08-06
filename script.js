@@ -1,6 +1,7 @@
 $(function() {
-  sound = new Howl({
-    src: ['Hey-Jude.mp3']
+  var playing = false;
+  var sound = new Howl({
+    src: ['Hey-Jude-min.mp3']
   });
   $(window).scroll(function() {
     var x = $(document).scrollTop();
@@ -21,8 +22,11 @@ $(function() {
       $("#w4").css({ "opacity": "0" });
     }
     if(x > (z * 3.5)) {
-      $("#massage").css({ opacity: (x - 3.5 * z) / ((3 / 7) * z) })
-      sound.play();
+      $("#massage").css({ opacity: (x - 3.5 * z) / ((3 / 7) * z) });
+      if (!playing) {
+            sound.play();
+            playing = true;
+      }
     }
   });
 });
