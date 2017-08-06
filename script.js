@@ -20,6 +20,9 @@ $(window).scroll(function() {
     $("#w4").css({"opacity" : "0"});
   }
   if (x  > (z* 3.8) ) {
-    $("#massage").animate({opacity : 1}, 1000);
-  }
+   $("#massage").fadeIn(1000);
+ }
+ else if (x  < (z* 3.6)) {
+   $("#massage").fadeOut();
+ }
 });
