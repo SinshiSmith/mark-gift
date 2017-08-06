@@ -1,13 +1,22 @@
 $(window).scroll(function() {
   var x = $(document).scrollTop();
-  if (x  > 300){
+  var z = $(window).innerHeight();
+  if (x  > (z*1.5) ){
     $("#w2").css({"opacity" : "1"});
   }
-  if (x  > 600){
+  else {
+    $("#w2").css({"opacity" : "0"});
+  }
+  if (x  > (z*2.5) ){
     $("#w3").css({"opacity" : "1"});
   }
-  if (x  > 1000){
+  else {
+    $("#w3").css({"opacity" : "0"});
+  }
+  if (x  > (z*3.5) ){
     $("#w4").css({"opacity" : "1"});
   }
-  console.log(x);
+  else {
+    $("#w4").css({"opacity" : "0"});
+  }
 });
