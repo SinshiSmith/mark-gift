@@ -19,10 +19,13 @@ $(window).scroll(function() {
   else {
     $("#w4").css({"opacity" : "0"});
   }
-  if (x  > (z* 3.8) ) {
-   $("#massage").fadeIn(1000);
- }
- else if (x  < (z* 3.6)) {
-   $("#massage").fadeOut();
- }
+  if (x > (z * 3.5)) {
+  $("#massage").css({opacity: (x-3.5*z) / ((3/7) * z)})
+}
+ //  if (x  > (z* 3.8) ) {
+ //   $("#massage").fadeIn(1000);
+ // }
+ // else if (x  < (z* 3.6)) {
+ //   $("#massage").fadeOut();
+ // }
 });
